@@ -1,0 +1,236 @@
+.home-view {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg, 2rem);
+  padding: var(--spacing-lg, 2rem) 0;
+}
+
+.home-hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md, 1rem);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.home-hero h1 {
+  font-size: var(--font-size-2xl, 2rem);
+  line-height: 1.2;
+}
+
+.home-hero p {
+  color: var(--color-text-muted, var(--color-muted, #64748b));
+  font-size: var(--font-size-base, 1.125rem);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-md, 1.5rem);
+}
+
+.stat-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs, 0.5rem);
+}
+
+.stat-card h3 {
+  font-size: var(--font-size-3xl, 2.25rem);
+  color: var(--color-primary, #3b82f6);
+  margin: 0;
+}
+
+.stat-card p {
+  color: var(--color-text-muted, var(--color-muted, #64748b));
+  margin: 0;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs, 0.5rem);
+}
+
+.feature-card h3 {
+  font-size: var(--font-size-lg, 1.25rem);
+  margin: 0;
+}
+
+.feature-card p {
+  color: var(--color-text-muted, var(--color-muted, #64748b));
+  margin: 0;
+}
+
+/* ==========================================================================
+   FORMULARIO DE RECURSO
+   ========================================================================== */
+
+.form-view {
+  max-width: 600px;
+  margin: var(--space-xl, 2rem) auto;
+}
+
+.form-view h1 {
+  margin-bottom: var(--space-lg, 1.5rem);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs, 0.25rem);
+  margin-bottom: var(--space-md, 1rem);
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: var(--font-size-body-sm, 0.875rem);
+  color: var(--color-text);
+}
+
+.form-error {
+  font-size: var(--font-size-body-sm, 0.875rem);
+  color: var(--color-error);
+  min-height: 1.25rem;
+}
+
+.form-radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md, 1rem);
+  align-items: center;
+}
+
+.radio-label,
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs, 0.5rem);
+  cursor: pointer;
+  font-size: var(--font-size-body-md);
+  color: var(--color-text);
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-md, 1rem);
+  margin-top: var(--space-lg, 1.5rem);
+}
+
+/* ==========================================================================
+   TOAST POSICIONAMIENTO
+   ========================================================================== */
+
+.toast {
+  position: fixed;
+  bottom: var(--space-lg, 1.5rem);
+  right: var(--space-lg, 1.5rem);
+  z-index: 1000;
+}
+
+/* ==========================================================================
+   VISTA DE LISTADO DE RECURSOS
+   ========================================================================== */
+
+.list-view {
+  padding: var(--space-xl, 2rem) 0;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg, 1.5rem);
+  flex-wrap: wrap;
+  gap: var(--space-md, 1rem);
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md, 1rem);
+}
+
+@media (max-width: 1024px) {
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm, 0.75rem);
+}
+
+.resource-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs, 0.5rem);
+}
+
+.resource-card__favorite {
+  color: var(--color-warning, #f59e0b);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.resource-card__title {
+  font-size: var(--font-size-headline-sm, 1.125rem);
+  font-weight: var(--font-weight-semibold, 600);
+  line-height: 1.3;
+}
+
+.resource-card__title a {
+  color: var(--color-text);
+}
+
+.resource-card__title a:hover {
+  color: var(--color-primary);
+}
+
+.resource-card__domain {
+  font-family: var(--font-mono, monospace);
+  font-size: var(--font-size-code-sm, 0.8125rem);
+  color: var(--color-text-secondary, #64748b);
+  word-break: break-all;
+}
+
+.resource-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs, 0.5rem);
+  font-size: var(--font-size-body-sm, 0.875rem);
+  color: var(--color-text-secondary, #64748b);
+}
+
+.resource-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: var(--space-sm, 0.5rem);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-body-sm, 0.875rem);
+  color: var(--color-text-secondary, #64748b);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-xl, 3rem) var(--space-md, 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md, 1rem);
+}
